@@ -1,5 +1,3 @@
-# EY_Hackathon_AI-for-Digital-Public-Safety-Defeating-Counterfeiting
-
 # DefeatShield AI - Digital Public Safety Platform
 ### Combating Counterfeiting, Fraud Rings, and Digital Arrest Scams
 
@@ -9,7 +7,7 @@ Developed for the **EY AI Hackathon**, this platform shifts the paradigm of publ
 
 ---
 
-## Hackathon Judging Criteria Alignment (Score: 100%)
+## 🚀 Hackathon Judging Criteria Alignment (Score: 100%)
 
 1. **Innovation (25%):** Uses state-of-the-art Generative AI (Gemini Pro) to decode psychological coercion, combines OpenCV HSV profiling for security thread verification, performs NetworkX path traversal for money mule discovery, and calculates Spatial Haversine clustering to optimize police patrols.
 2. **Business Impact (25%):** Protects citizens from losing crores to Digital Arrest scams, secures banks against high-quality Fake Indian Currency Notes (FICN) circulation, and automates National Cyber Crime portal (NCRB) reporting to save manual police triage time.
@@ -19,7 +17,7 @@ Developed for the **EY AI Hackathon**, this platform shifts the paradigm of publ
 
 ---
 
-## Technology Stack & Core Tools
+## 🛠️ Technology Stack & Core Tools
 *   **Backend Core:** Python (FastAPI), Uvicorn, Pydantic v2 (Strict validation), Pydantic Settings (Security/Secrets management).
 *   **Generative AI / NLP:** Google Gemini Pro API (with custom 12-language local heuristic backup parser).
 *   **Computer Vision:** OpenCV (HSV color segmentation, Canny edge validation, Laplacian focus metrics).
@@ -29,7 +27,7 @@ Developed for the **EY AI Hackathon**, this platform shifts the paradigm of publ
 
 ---
 
-## System Architecture & Directory Layout
+## 📁 System Architecture & Directory Layout
 
 ```
 backend/
@@ -67,7 +65,7 @@ backend/
 
 ---
 
-## Working Principles of Core Intelligence Modules
+## 🧠 Working Principles of Core Intelligence Modules
 
 ### 1. Digital Arrest Scam Detection & Alerting
 *   **Objective:** Track call flow sequences, voice clones, and video metadata in real time to stop victims from transferring funds under coercion.
@@ -91,7 +89,7 @@ backend/
 
 ---
 
-## Installation & Setup Guide
+## 🛠️ Installation & Setup Guide
 
 ### 1. Prerequisite Checks
 Make sure you have Python 3.9+ installed. Verify with:
@@ -147,7 +145,7 @@ streamlit run frontend/app.py
 
 ---
 
-## Testing the APIs
+## 🧪 Testing the APIs
 Once the server is running, you can test every endpoint interactively via the built-in Swagger UI:
 *   **Interactive Swagger Documentation:** [http://localhost:8000/docs](http://localhost:8000/docs)
 *   **ReDoc Schema Documentation:** [http://localhost:8000/redoc](http://localhost:8000/redoc)
