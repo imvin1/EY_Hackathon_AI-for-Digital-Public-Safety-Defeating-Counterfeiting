@@ -17,8 +17,9 @@ Developed for the **EY AI Hackathon**, this platform shifts the paradigm of publ
 
 ---
 
-## 🛠️ Technology Stack & Core Tools
+## Technology Stack & Core Tools
 *   **Backend Core:** Python (FastAPI), Uvicorn, Pydantic v2 (Strict validation), Pydantic Settings (Security/Secrets management).
+*   **Frontend UI:** Streamlit (Interactive dashboard and multi-lingual citizen portal).
 *   **Generative AI / NLP:** Google Gemini Pro API (with custom 12-language local heuristic backup parser).
 *   **Computer Vision:** OpenCV (HSV color segmentation, Canny edge validation, Laplacian focus metrics).
 *   **Graph Engine:** NetworkX (in-memory graph representation, BFS/DFS money laundering path tracing, weakly connected component clustering).
@@ -30,37 +31,52 @@ Developed for the **EY AI Hackathon**, this platform shifts the paradigm of publ
 ## System Architecture & Directory Layout
 
 ```
-backend/
-├── app/
-│   ├── __init__.py         # Package initialization
-│   ├── main.py             # FastAPI entrypoint, middlewares, exceptions
-│   ├── config.py           # Global settings & thresholds (Pydantic Settings)
-│   ├── models/             # Strict Pydantic schemas (V2)
-│   │   ├── __init__.py
-│   │   ├── arrest_scam.py
-│   │   ├── counterfeit.py
-│   │   ├── fraud_network.py
-│   │   ├── geospatial.py
-│   │   └── citizen_shield.py
-│   ├── routers/            # APIRouters (FastAPI Controller Layer)
-│   │   ├── __init__.py
-│   │   ├── arrest_scam.py
-│   │   ├── counterfeit.py
-│   │   ├── fraud_network.py
-│   │   ├── geospatial.py
-│   │   └── citizen_shield.py
-│   ├── services/           # Core AI & Business logic services
-│   │   ├── __init__.py
-│   │   ├── arrest_scam_service.py
-│   │   ├── counterfeit_service.py
-│   │   ├── fraud_network_service.py
-│   │   ├── geospatial_service.py
-│   │   └── citizen_shield_service.py
-│   └── utils/              # Auxiliary logging & helper files
-│       ├── __init__.py
-│       └── validation.py
-├── requirements.txt        # Backend dependencies
-└── README.md               # Complete project documentation
+EY_Hackathon_AI/
+├── backend/                    # FastAPI backend server
+│   ├── app/
+│   │   ├── __init__.py         # Package initialization
+│   │   ├── main.py             # FastAPI entrypoint, middlewares, exception handlers
+│   │   ├── config.py           # Global settings & thresholds (Pydantic Settings)
+│   │   ├── models/             # Pydantic V2 schemas for data validation
+│   │   │   ├── __init__.py
+│   │   │   ├── arrest_scam.py       # Digital arrest scam data models
+│   │   │   ├── counterfeit.py       # Counterfeit currency models
+│   │   │   ├── fraud_network.py     # Fraud ring network models
+│   │   │   ├── geospatial.py        # Geospatial hotspot models
+│   │   │   └── citizen_shield.py    # Citizen query & alert models
+│   │   ├── routers/            # FastAPI APIRouters (Controller layer)
+│   │   │   ├── __init__.py
+│   │   │   ├── arrest_scam.py       # Digital arrest scam endpoints
+│   │   │   ├── counterfeit.py       # Counterfeit verification endpoints
+│   │   │   ├── fraud_network.py     # Fraud network analysis endpoints
+│   │   │   ├── geospatial.py        # Geospatial mapping endpoints
+│   │   │   └── citizen_shield.py    # Multi-lingual citizen portal endpoints
+│   │   ├── services/           # Core AI & business logic services
+│   │   │   ├── __init__.py
+│   │   │   ├── arrest_scam_service.py       # Call flow & threat analysis
+│   │   │   ├── counterfeit_service.py       # HSV & security thread verification
+│   │   │   ├── fraud_network_service.py     # Graph intelligence & path tracing
+│   │   │   ├── geospatial_service.py        # Hotspot clustering & patrol optimization
+│   │   │   └── citizen_shield_service.py    # Multi-lingual query processing
+│   │   └── utils/              # Utility functions
+│   │       └── __init__.py
+│   └── requirements.txt        # Python backend dependencies
+│
+├── frontend/                   # Streamlit dashboard UI
+│   └── app.py                  # Streamlit multi-page application
+│
+├── app.py                      # Root entry point (alternate launcher)
+├── streamlit.py                # Streamlit runner configuration
+├── generate_project_pdf.py     # Hackathon documentation generator
+├── HACKATHON_SUBMISSION_DOSSIER.md  # Detailed submission documentation
+│
+├── venv/                       # Python virtual environment (development)
+├── .venv/                      # Alternate Python virtual environment
+├── output/                     # Generated reports & analysis outputs
+├── .git/                       # Git version control
+├── __pycache__/                # Python cache files
+│
+└── README.md                   # This file - Project documentation
 ```
 
 ---
@@ -153,6 +169,6 @@ Once the server is running, you can test every endpoint interactively via the bu
 
 ---
 
-## ⚖️ License
+## License
 DefeatShield AI is proprietary software developed for the EY_AI _Hackathon. 
 All rights reserved.
