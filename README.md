@@ -135,7 +135,7 @@ pip install -r backend/requirements.txt
 Create a `.env` file in the root directory (or let the app default to standard credentials defined in `config.py`):
 ```env
 # Gemini API Key (Optional: Falls back to local heuristics if not provided)
-GEMINI_API_KEY=AQ.Ab8RN6La74Dmo_zfWHpKguZOb-iXjV4a1p2FW1rE6WUK1XhO1w
+GEMINI_API_KEY=AQ.Ab8RN6La74Dmo_zfWHpKguZOb.....
 
 # System Flags
 DEBUG=True
